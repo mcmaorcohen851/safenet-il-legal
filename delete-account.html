@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeNet IL — מחיקת חשבון ונתונים</title>
+  <style>
+    :root { --primary: #5B6FFF; --bg: #f6f7fb; --card: #fff; --text: #1a1d2b; --muted: #5c6275; --border: #e6e8f0; --danger: #d92d20; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--primary); color: #fff; padding: 28px 20px; }
+    header .wrap { max-width: 760px; margin: 0 auto; }
+    header h1 { margin: 0; font-size: 26px; }
+    header p { margin: 6px 0 0; opacity: .9; font-size: 13px; }
+    main { max-width: 760px; margin: 0 auto; padding: 20px; }
+    section { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin-bottom: 16px; }
+    section h2 { margin: 0 0 8px; font-size: 17px; color: var(--text); }
+    section p, section li { color: var(--muted); font-size: 15px; }
+    ul, ol { padding-right: 20px; margin: 8px 0 0; }
+    li { margin-bottom: 8px; }
+    a { color: var(--primary); }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { position: relative; padding-right: 40px; margin-bottom: 14px; }
+    .steps li::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; right: 0; top: 1px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 15px; }
+    th, td { text-align: right; padding: 9px 10px; border-bottom: 1px solid var(--border); color: var(--muted); }
+    th { color: var(--text); font-size: 14px; }
+    .warn { background: #fff4f3; border: 1px solid #ffd7d3; border-radius: 12px; padding: 14px 16px; margin-top: 12px; }
+    .warn b { color: var(--danger); }
+    footer { text-align: center; padding: 24px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>🗑️ מחיקת חשבון ונתונים — SafeNet IL</h1>
+      <p>עדכון אחרון: 11 באוגוסט 2026</p>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>על מה העמוד הזה</h2>
+      <p>
+        העמוד מסביר כיצד למחוק את חשבון ההורה שלך באפליקציה
+        <b>SafeNet IL</b> ואת כל הנתונים המשויכים אליו — שלך ושל הילדים
+        שהוספת. המחיקה זמינה לכל משתמש, בכל עת, ובלא תשלום.
+      </p>
+    </section>
+
+    <section>
+      <h2>הדרך המהירה — מתוך האפליקציה</h2>
+      <ol class="steps">
+        <li>פתח את אפליקציית SafeNet IL והתחבר לחשבון ההורה שלך.</li>
+        <li>עבור אל <b>הגדרות</b> (סמל גלגל השיניים בתפריט התחתון).</li>
+        <li>גלול לתחתית המסך ובחר <b>מחיקת חשבון</b>.</li>
+        <li>סמן את תיבת האישור ("אני מבין/ה שהפעולה בלתי הפיכה").</li>
+        <li>הקלד את המילה <b>מחק</b> בשדה האישור ולחץ על כפתור המחיקה.</li>
+      </ol>
+      <p style="margin-top:14px">
+        החשבון ננעל מיידית ואינך יכול להתחבר אליו יותר. מחיקת הנתונים
+        מהשרתים מושלמת בתוך 30 יום.
+      </p>
+    </section>
+
+    <section>
+      <h2>אין לך גישה לאפליקציה?</h2>
+      <p>
+        אם הסרת את האפליקציה, איבדת את הסיסמה או אינך יכול להיכנס מכל
+        סיבה אחרת — שלח בקשה למחיקה לכתובת
+        <a href="mailto:safenetapps@gmail.com">safenetapps@gmail.com</a>
+        מכתובת האימייל שאיתה נרשמת.
+      </p>
+      <p>
+        נאמת את זהותך ונבצע את המחיקה בתוך 30 יום. אין צורך לנמק את
+        הבקשה.
+      </p>
+    </section>
+
+    <section>
+      <h2>מה נמחק ומה נשמר</h2>
+      <table>
+        <tr>
+          <th>סוג הנתונים</th>
+          <th>מה קורה</th>
+        </tr>
+        <tr>
+          <td>פרטי חשבון ההורה (אימייל, שם)</td>
+          <td>נמחק</td>
+        </tr>
+        <tr>
+          <td>פרטי הילדים (שם, גיל)</td>
+          <td>נמחק</td>
+        </tr>
+        <tr>
+          <td>כל ההתראות וההודעות שנותחו</td>
+          <td>נמחק</td>
+        </tr>
+        <tr>
+          <td>הקלטות קול ותמלולים</td>
+          <td>נמחק</td>
+        </tr>
+        <tr>
+          <td>אסימוני מכשיר להתראות Push</td>
+          <td>נמחק</td>
+        </tr>
+        <tr>
+          <td>רשומות חיוב ומנוי</td>
+          <td>נשמרות כנדרש בדין (עד 7 שנים)</td>
+        </tr>
+      </table>
+      <p style="margin-top:12px">
+        רשומות החיוב נשמרות אך ורק לצורך עמידה בחובות דיווח וניהול ספרים
+        לפי הדין הישראלי, ואינן כוללות תוכן הודעות, התראות או נתוני ילדים.
+      </p>
+      <div class="warn">
+        <p style="margin:0"><b>המחיקה בלתי הפיכה.</b> לא ניתן לשחזר חשבון
+        או היסטוריית התראות לאחר המחיקה. אם ברצונך לשמור מידע כלשהו,
+        ייצא אותו לפני שתתחיל.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>מה קורה למכשיר של הילד</h2>
+      <p>
+        עם מחיקת החשבון, המכשירים המשויכים מנותקים והניטור נפסק. מומלץ
+        גם להסיר את האפליקציה ממכשיר הילד — היא ניתנת להסרה רגילה, כמו
+        כל אפליקציה אחרת.
+      </p>
+    </section>
+
+    <section>
+      <h2>ביטול מנוי</h2>
+      <p>
+        מחיקת חשבון אינה מבטלת אוטומטית מנוי פעיל שנרכש דרך חנות
+        האפליקציות. לביטול המנוי יש לפעול דרך
+        <b>Google Play ← מנויים</b>, או לפנות אלינו בכתובת המפורטת למטה.
+      </p>
+    </section>
+
+    <section>
+      <h2>יצירת קשר</h2>
+      <p>
+        לכל שאלה בנושא מחיקת נתונים:
+        <a href="mailto:safenetapps@gmail.com">safenetapps@gmail.com</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    © 2026 SafeNet IL ·
+    <a href="privacy.html">מדיניות פרטיות</a> ·
+    <a href="terms.html">תנאי שימוש</a>
+  </footer>
+</body>
+</html>
