@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mcmaorcohen851.github.io/safenet-il-legal/sitemap.xml

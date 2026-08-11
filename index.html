@@ -1,25 +1,316 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeNet IL</title>
-  <style>
-    body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:#5B6FFF; color:#fff; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; }
-    .card { padding:40px; }
-    h1 { font-size:34px; margin:0 0 8px; }
-    p { opacity:.92; font-size:16px; }
-    a { display:inline-block; margin:10px 8px 0; background:#fff; color:#5B6FFF; text-decoration:none; font-weight:700; padding:12px 22px; border-radius:12px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SafeNet IL — הגנה חכמה לילדים ברשת</title>
+<meta name="description" content="SafeNet IL מזהה בעזרת בינה מלאכותית בריונות, איומים, סחיטה ופניות מזרים בהודעות שהילד מקבל — ומתריעה להורה בעברית, עם כלים לפתוח שיחה. שקוף לילד, לא מרגל." />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SafeNet IL" />
+<meta property="og:locale" content="he_IL" />
+<meta property="og:title" content="SafeNet IL — הגנה חכמה לילדים ברשת" />
+<meta property="og:description" content="AI שמזהה בריונות, איומים וסחיטה בהודעות של הילד ומתריע להורה בזמן אמת. שקוף לילד לחלוטין." />
+<meta property="og:url" content="https://mcmaorcohen851.github.io/safenet-il-legal/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="canonical" href="https://mcmaorcohen851.github.io/safenet-il-legal/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SafeNet IL",
+  "applicationCategory": "Parenting",
+  "operatingSystem": "Android",
+  "inLanguage": "he",
+  "description": "אפליקציית בקרת הורים מבוססת AI שמזהה בריונות, איומים, סחיטה ופניות מזרים בהודעות שהילד מקבל, ומתריעה להורה בעברית.",
+  "offers": {
+    "@type": "Offer",
+    "price": "49",
+    "priceCurrency": "ILS",
+    "description": "החל מ-49 ₪ לחודש. 14 יום ניסיון."
+  }
+}
+</script>
+
+<style>
+  :root{
+    --blue:#2C82F2; --blue-dark:#1D5FD0; --blue-deep:#0E3E96;
+    --ink:#111827; --muted:#5b6478; --line:#e5e9f2;
+    --bg:#ffffff; --soft:#f5f8ff;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Segoe UI",system-ui,Arial,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin-inline:auto; padding-inline:20px}
+  section{padding-block:64px}
+  h1,h2,h3{line-height:1.25; margin:0}
+  h2{font-size:clamp(24px,3.4vw,32px); margin-block-end:12px}
+  p{margin:0 0 14px}
+  a{color:var(--blue)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(115deg,var(--blue-deep) 0%,var(--blue-dark) 45%,var(--blue) 100%);
+    color:#fff; position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:""; position:absolute; inset:0; opacity:.09;
+    background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
+    background-size:54px 54px;
+  }
+  .hero .wrap{position:relative; z-index:2; padding-block:72px 68px;
+              display:flex; align-items:center; gap:44px; flex-wrap:wrap}
+  .hero-copy{flex:1 1 340px}
+  .hero h1{font-size:clamp(32px,5.4vw,50px); font-weight:800; letter-spacing:-.5px}
+  .hero .tag{font-size:clamp(17px,2.2vw,21px); color:#dceaff; margin-block-start:16px; max-width:34ch}
+  .hero-art{flex:0 0 190px; display:flex; justify-content:center}
+  .hero-art svg{filter:drop-shadow(0 16px 34px rgba(4,20,58,.45))}
+
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-block-start:28px}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:700; font-size:16px;
+    padding:14px 26px; border-radius:14px; transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:#fff; color:var(--blue-dark); box-shadow:0 8px 22px rgba(4,20,58,.28)}
+  .btn-ghost{background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.4)}
+
+  .badges{display:flex; gap:10px; flex-wrap:wrap; margin-block-start:22px}
+  .badge{
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.32);
+    border-radius:999px; padding:7px 16px; font-size:14px; font-weight:600;
+  }
+
+  /* ---------- generic blocks ---------- */
+  .lead{font-size:18px; color:var(--muted); max-width:62ch}
+  .grid{display:grid; gap:16px; margin-block-start:26px}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{
+    background:var(--soft); border:1px solid var(--line);
+    border-radius:var(--radius); padding:22px 24px;
+  }
+  .card h3{font-size:18px; margin-block-end:6px}
+  .card p{color:var(--muted); font-size:15px; margin:0}
+  .card .em{font-size:26px; display:block; margin-block-end:10px}
+
+  .steps{counter-reset:s; list-style:none; padding:0; margin:26px 0 0; display:grid; gap:18px}
+  .steps li{position:relative; padding-inline-start:56px}
+  .steps li::before{
+    counter-increment:s; content:counter(s);
+    position:absolute; inset-inline-start:0; top:0;
+    width:38px; height:38px; border-radius:50%;
+    background:var(--blue); color:#fff; font-weight:800; font-size:17px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps b{display:block; font-size:17px}
+  .steps span{color:var(--muted); font-size:15px}
+
+  .alt{background:var(--soft); border-block:1px solid var(--line)}
+
+  .notice{
+    border:1px solid #ffd9a8; background:#fff8ec;
+    border-radius:var(--radius); padding:22px 24px;
+  }
+  .notice h3{font-size:18px; margin-block-end:8px}
+  .notice p{color:#7a5a24; margin:0 0 8px; font-size:15px}
+  .notice p:last-child{margin:0}
+
+  /* ---------- pricing ---------- */
+  .plans{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-block-start:26px}
+  .plan{border:2px solid var(--line); border-radius:var(--radius); padding:24px; text-align:center; background:#fff}
+  .plan.best{border-color:var(--blue); box-shadow:0 10px 30px rgba(44,130,242,.14)}
+  .plan .nm{font-weight:800; font-size:17px}
+  .plan .pr{font-size:34px; font-weight:800; margin-block:8px 0; color:var(--blue-dark)}
+  .plan .pr small{font-size:15px; font-weight:600; color:var(--muted)}
+  .plan .desc{color:var(--muted); font-size:14px; margin-block-start:6px}
+  .plan .flag{
+    display:inline-block; background:var(--blue); color:#fff; font-size:12px; font-weight:700;
+    border-radius:999px; padding:3px 12px; margin-block-end:10px;
+  }
+
+  /* ---------- faq ---------- */
+  details{border-bottom:1px solid var(--line); padding-block:16px}
+  details summary{cursor:pointer; font-weight:700; font-size:16px; list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+"; float:inline-start; color:var(--blue); font-size:22px; line-height:1; margin-inline-end:10px}
+  details[open] summary::after{content:"−"}
+  details p{color:var(--muted); font-size:15px; margin:10px 0 0; padding-inline-start:26px}
+
+  /* ---------- footer ---------- */
+  footer{background:#0f1729; color:#9fb0cc; padding-block:36px; font-size:14px}
+  footer a{color:#cfe0ff; text-decoration:none; margin-inline-end:18px}
+  footer a:hover{text-decoration:underline}
+  .fnote{margin-block-start:14px; opacity:.7; font-size:13px}
+
+  @media (max-width:640px){
+    section{padding-block:48px}
+    .hero .wrap{padding-block:52px 48px; gap:28px}
+    .hero-art{flex-basis:130px}
+    .hero-art svg{width:130px;height:auto}
+  }
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>🛡️ SafeNet IL</h1>
-    <p>בקרת הורים חכמה מבוססת בינה מלאכותית — בעברית.</p>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>הילד שלך לא תמיד יספר לך</h1>
+      <p class="tag">SafeNet IL מזהה בריונות, איומים וסחיטה בהודעות שהוא מקבל — ומתריעה לך מיד, עם המילים לפתוח בהן שיחה.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#how">איך זה עובד</a>
+        <a class="btn btn-ghost" href="mailto:safenetapps@gmail.com?subject=SafeNet%20IL">דברו איתנו</a>
+      </div>
+      <div class="badges">
+        <div class="badge">בעברית ובסלנג ישראלי</div>
+        <div class="badge">שקוף לילד</div>
+        <div class="badge">אנדרואיד</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg width="190" height="209" viewBox="0 0 300 330" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCEAFF"/>
+        </linearGradient></defs>
+        <path d="M150 8 L286 62 V168 C286 246 226 296 150 322 C74 296 14 246 14 168 V62 Z" fill="url(#s)"/>
+        <path d="M150 34 L262 78 V168 C262 231 214 273 150 296 C86 273 38 231 38 168 V78 Z"
+              fill="none" stroke="#2C82F2" stroke-opacity=".22" stroke-width="7"/>
+        <path d="M96 166 L134 205 L206 128" fill="none" stroke="#2C82F2"
+              stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>מה SafeNet מזהה</h2>
+    <p class="lead">הבינה המלאכותית מבינה עברית ואת הסלנג שבו בני נוער באמת מדברים. היא לא סורקת רשימת מילים אסורות — היא מבינה הקשר: מי אמר, מה נאמר, וכמה זה מסוכן.</p>
+    <div class="grid g3">
+      <div class="card"><span class="em">💬</span><h3>בריונות רשת</h3><p>הצקות חוזרות, השפלה, נידוי מקבוצות.</p></div>
+      <div class="card"><span class="em">⚠️</span><h3>איומים וסחיטה</h3><p>כולל סחיטה מינית — התחום שגדל הכי מהר בקרב בני נוער.</p></div>
+      <div class="card"><span class="em">🕵️</span><h3>פנייה מזרים</h3><p>מבוגרים שמנסים ליצור קשר או לבנות אמון עם הילד.</p></div>
+      <div class="card"><span class="em">🔞</span><h3>תוכן מיני לא הולם</h3><p>בקשות לתמונות, תוכן שנשלח ביוזמת אחרים.</p></div>
+      <div class="card"><span class="em">🌧️</span><h3>מצוקה רגשית</h3><p>סימנים לדיכאון, בדידות או מחשבות על פגיעה עצמית.</p></div>
+      <div class="card"><span class="em">🧠</span><h3>ולא רק התראה</h3><p>כל התראה מגיעה עם הסבר בעברית ושלוש שאלות לפתוח בהן שיחה.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <h2>איך זה עובד</h2>
+    <ol class="steps">
+      <li><b>פותחים חשבון ומוסיפים את הילד</b><span>שם וגיל. הגיל משנה — מה שתמים אצל בן 8 מדאיג אצל בן 16.</span></li>
+      <li><b>מחברים את הטלפון שלו בקליק</b><span>שולחים קישור בוואטסאפ או סורקים QR. הילד לוחץ, מאשר, וזהו. בלי הקלדות.</span></li>
+      <li><b>מקבלים התראה כשמשהו חשוד</b><span>מה נכתב, למה זה מדאיג, כמה זה דחוף — ואיך לדבר על זה בלי להיכנס לחקירה.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>זו לא אפליקציית ריגול</h2>
+    <p class="lead">בנינו את SafeNet כך שהילד יודע. זו לא פשרה טכנית — זו בחירה.</p>
+    <p class="lead">הגנה שנשענת על הסתרה מתפוצצת ביום שהילד מגלה אותה. מה שנשאר אחר כך זה לא ילד מוגן, אלא ילד שלמד שאי אפשר לסמוך עליכם — ושמעביר את החיים החברתיים שלו למקום שאתם לא רואים.</p>
+    <div class="grid g3">
+      <div class="card"><h3>✓ הילד מאשר</h3><p>לפני החיבור מוצג לו הסבר מלא, והוא נדרש לאשר שקרא והבין.</p></div>
+      <div class="card"><h3>✓ האייקון גלוי</h3><p>אין הסתרה, ואפשר להסיר את האפליקציה בכל רגע כמו כל אפליקציה אחרת.</p></div>
+      <div class="card"><h3>✓ אתם לא רואים שיחות</h3><p>רק מה שהמערכת סימנה כמסוכן. שיחות רגילות נשארות פרטיות.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="notice">
+      <h3>⚠️ חשוב לדעת לפני שמתחילים</h3>
+      <p><b>הטלפון של הילד חייב להיות אנדרואיד.</b> אייפון לא נתמך — אפל לא מאפשרת לאף אפליקציה לגשת להודעות של אפליקציות אחרות, וזו מגבלה של מערכת ההפעלה שאין דרך חוקית לעקוף.</p>
+      <p>הטלפון שלכם, ההורים, יכול להיות כל דבר — כולל אייפון או דפדפן במחשב.</p>
+      <p>אנחנו מעדיפים לומר את זה כאן, ולא אחרי שתשלמו.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>מחירים</h2>
+    <p class="lead">14 יום ניסיון. ביטול בכל עת מתוך האפליקציה, בלי קנס ובלי שיחת שכנוע.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="nm">Basic</div>
+        <div class="pr">₪49<small> / חודש</small></div>
+        <div class="desc">ילד אחד</div>
+      </div>
+      <div class="plan best">
+        <div class="flag">המומלץ</div>
+        <div class="nm">Family</div>
+        <div class="pr">₪89<small> / חודש</small></div>
+        <div class="desc">עד 3 ילדים</div>
+      </div>
+      <div class="plan">
+        <div class="nm">Pro</div>
+        <div class="pr">₪149<small> / חודש</small></div>
+        <div class="desc">ללא הגבלת ילדים</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>שאלות שהורים שואלים</h2>
+
+    <details><summary>אני רואה את כל ההודעות של הילד?</summary>
+      <p>לא. רק הודעות שהופעל עליהן זיהוי סיכון. שיחות רגילות עם חברים לא מוצגות לכם בכלל.</p></details>
+
+    <details><summary>הילד יכול פשוט למחוק את האפליקציה?</summary>
+      <p>כן — במכוון. אפליקציה שחוסמת את הסרתה נחשבת תוכנת ריגול וגוגל אוסרת אותה. אם היא הוסרה, תראו שהמכשיר הפסיק לדווח.</p></details>
+
+    <details><summary>ה-AI טועה לפעמים?</summary>
+      <p>כן. הוא עלול לסמן בדיחה בין חברים כאיום, או לפספס משהו מתוחכם. זה כלי עזר להורות, לא תחליף לה.</p></details>
+
+    <details><summary>מה קורה למידע שלנו?</summary>
+      <p>התקשורת מוצפנת, אנחנו לא מוכרים מידע ולא משתפים עם רשתות פרסום, ואפשר למחוק את החשבון וכל הנתונים מתוך האפליקציה. הפירוט המלא — כולל היכן מאוחסן המידע ומי מעבד אותו — נמצא <a href="privacy.html">במדיניות הפרטיות</a>.</p></details>
+
+    <details><summary>מאיזה גיל זה מתאים?</summary>
+      <p>אין תשובה אחת. ככל שהילד מבוגר יותר, כך חשוב יותר שההחלטה תתקבל יחד איתו ולא עליו. אנחנו ממליצים בכל גיל לשוחח לפני ההתקנה.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center">
+    <h2>יש לכם שאלה?</h2>
+    <p class="lead" style="margin-inline:auto">כל שאלה על האפליקציה, על הפרטיות או על ההתאמה לגיל של הילד שלכם — נשמח לענות.</p>
+    <div style="margin-block-start:22px">
+      <a class="btn btn-primary" style="background:var(--blue); color:#fff"
+         href="mailto:safenetapps@gmail.com?subject=SafeNet%20IL">
+        safenetapps@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
     <div>
       <a href="privacy.html">מדיניות פרטיות</a>
       <a href="terms.html">תנאי שימוש</a>
+      <a href="delete-account.html">מחיקת נתונים</a>
+      <a href="mailto:safenetapps@gmail.com">צור קשר</a>
     </div>
+    <p class="fnote">© 2026 SafeNet IL · האפליקציה היא כלי עזר להורות ואינה תחליף לשיחה עם הילד או לפנייה לגורם מקצועי.<br>
+    במצוקה מיידית: קו הסיוע לילדים ולנוער 105 · ער"ן 1201</p>
   </div>
+</footer>
+
 </body>
 </html>
